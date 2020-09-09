@@ -97,9 +97,10 @@ a{
 
 a:hover{
     top: 4px;
-    color: #E43B20;
+    /*color: #E43B20;*/
+    color: white;
     text-decoration: none;
-    border-bottom: #E43B20 solid 1px;
+    border-bottom: #E43B20 solid 2px;
 }
 
 .purchase{
@@ -135,12 +136,22 @@ button.purchase{
     transition-duration: 0.2s;
     position: relative;
     top: 0;
+    margin: 0 8px;
 }
 
 button.purchase:hover{
     cursor: pointer;
     /*background-color: rgb(277,277,277, 0.2);*/
-    color: #E43B20;
     border-color: #E43B20;
-    top: 2px;
+    top: 1px;
+}
+
+.price{
+    margin: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    p{
+        font-size: 13px;
+    }
 }

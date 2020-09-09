@@ -15,7 +15,6 @@ red: #E43B20
 
 body{
     max-width: 100%;
-    /*background-color: rgb(49, 49, 49);*/
     color: white;
     background-image: url('./images/cover-photo-dark.jpg');
     background-size: cover;
@@ -32,7 +31,7 @@ header * {
 .row{
     width: 100%;
     /*margin-bottom: 60px;*/
-    height: 100vh;
+    /*height: 100vh;*/
     min-height: 520px;
 }
 
@@ -73,6 +72,7 @@ h3{
     border-radius: 2px;
     position: relative;
     top: 0;
+    margin-bottom: 30px;
 }
 
 .description-container{
@@ -163,9 +163,50 @@ button.purchase:hover{
     margin: 0;
 }
 
+span.author{
+    font-family: MinionPro;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+p{
+    font-size: 18px;
+}
+
+div.contact {
+    min-height: 200px;
+    background-color: rgb(25,25,25,0.6)
+}
+
+@media only screen and (max-width: 1400px) {
+    p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    p{
+        font-size: 12px;
+    }
+}
 
 @media only screen and (max-width: 800px) {
     p{
-        font-size: 13px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    li{
+        margin: 0px 1%;
+    }
+    
+    a{
+        font-size: 16px;
+    }
+
+    p{
+        font-size: 12px;
     }
 }

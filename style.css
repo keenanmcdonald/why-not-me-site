@@ -14,8 +14,13 @@ red: #E43B20
 }
 
 body{
-    background-color: rgb(49, 49, 49);
+    max-width: 100%;
+    /*background-color: rgb(49, 49, 49);*/
     color: white;
+    background-image: url('./images/cover-photo-dark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 header * {
@@ -23,21 +28,25 @@ header * {
     background-color: transparent;
 }
 
+.row{
+    width: 100%;
+    margin: 0;
+}
+
+section.content{
+    width: 100%;
+    background-color: rgb(20,20,20,0.9);
+    padding: 50px 10%;
+
+}
+
 .hero{
-    background-image: url('./images/cover-photo-dark.jpg');
-    background-size: cover;
-    background-position: center;
     height: 100vh;
     text-align: center;
 }
 
 .hero-text-container{
     margin-top: 15%;
-}
-
-section.content{
-    padding: 0 8%;
-
 }
 
 h1 {
@@ -78,7 +87,7 @@ ul{
 
 li{
     display: inline-block;
-    margin: 0px 10% ;
+    margin: 0px 10%;
 }
 
 a{
@@ -103,28 +112,28 @@ a:hover{
     border-bottom: #E43B20 solid 2px;
 }
 
-.purchase{
-    padding-top: 50px;
-}
-
-.about{
-    padding-top: 50px;
-
-}
-
-.about-title-container{
+.row-title-container{
     text-align: center;
     width: 100%;
     margin-bottom: 6px;
 }
 
-.about-title{
-    font-family: BernhardFashion;
-    font-size: 40px;
+h4{
+    font-family: MinionPro;
+    font-size: 30px;
 }
 
+h5.plain-subtitle{
+    font-family: MinionPro;
+}
+
+div.row{
+    padding: 50px 0;
+}
+
+
 .button-container{
-    text-align: center;
+    margin: 15px 0;
 }
 
 button.purchase{

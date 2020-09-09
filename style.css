@@ -1,0 +1,146 @@
+/*
+--- colors ---
+red: #E43B20
+
+*/
+
+@font-face {
+    font-family: BernhardFashion;
+    src: url("./fonts/BernhardFashion-Std-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: MinionPro;
+    src: url("./fonts/MinionPro-Regular.otf") format("opentype");
+}
+
+body{
+    background-color: rgb(49, 49, 49);
+    color: white;
+}
+
+header * {
+    display: inline-block;
+    background-color: transparent;
+}
+
+.hero{
+    background-image: url('./images/cover-photo-dark.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.hero-text-container{
+    margin-top: 15%;
+}
+
+section.content{
+    padding: 0 8%;
+
+}
+
+h1 {
+    font-family: BernhardFashion;
+    font-size: 80px;
+    color: #E43B20;
+}
+
+h2 {
+    font-family: MinionPro;
+    font-size: 24px;
+}
+
+h3{
+    font-family: BernhardFashion;
+    font-size: 38px;
+}
+
+.cover {
+    max-width: 100%;
+    box-shadow: -2px 2px 6px 0px rgba(0,0,0,0.4);
+    border-radius: 2px;
+}
+
+.description-container{
+    padding-left: 4%;
+}
+
+nav{
+    margin-top: 6px;
+}
+
+ul{
+    padding: 0px;
+    width: 96vw;
+    height: 100px;
+}
+
+li{
+    display: inline-block;
+    margin: 0px 10% ;
+}
+
+a{
+    color: white;
+    font-family: MinionPro;
+    /*
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    */
+    font-size: 20px;
+    transition-duration: 0.2s;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    border-bottom: transparent solid 1px;
+}
+
+a:hover{
+    top: 4px;
+    color: #E43B20;
+    text-decoration: none;
+    border-bottom: #E43B20 solid 1px;
+}
+
+.purchase{
+    padding-top: 50px;
+}
+
+.about{
+    padding-top: 50px;
+
+}
+
+.about-title-container{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.about-title{
+    font-family: BernhardFashion;
+    font-size: 40px;
+}
+
+.button-container{
+    text-align: center;
+}
+
+button.purchase{
+    background-color: transparent;
+    border: 1px white solid;
+    border-radius: 4px;
+    color: white;
+    padding: 2% 8%;
+    transition-duration: 0.2s;
+    position: relative;
+    top: 0;
+}
+
+button.purchase:hover{
+    cursor: pointer;
+    /*background-color: rgb(277,277,277, 0.2);*/
+    color: #E43B20;
+    border-color: #E43B20;
+    top: 2px;
+}

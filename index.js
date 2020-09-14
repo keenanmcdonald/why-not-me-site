@@ -33,16 +33,16 @@ function backgroundScrollIn(scrollTop){
 function purchaseScrollIn(scrollTop){
     const purchaseTop = $('#purchase').position().top
     const amount = Math.max((purchaseTop - scrollTop) / $(window).height(), 0)
-    $('#purchase').css('opacity', 1-amount)
-    $('img.cover').css('top', Math.max(amount-0.2, 0)*160)
+    $('#purchase').css('opacity', 1.1-amount)
+    $('img.cover').css('top', (Math.max(amount-0.3, 0)*100))
     $('img.cover').css('box-shadow', `-2px 2px 6px 0px rgba(0,0,0, ${1-(Math.min(0.2, amount)*3)})`);
+    $('.description-container').css('left', (Math.max(amount-0.3, 0)*60))
 }
 
 function aboutScrollIn(scrollTop){
     const aboutTop = $('#about').position().top
     const amount = Math.max((aboutTop - scrollTop) / $(window).height(), 0)
-    $('#about').css('opacity', 1-amount)
-
-    $('span.author').css('color', `rgb(240,240,240, ${1-amount})`)
-
+    $('#about').css('opacity', 1.1-amount)
+    $('img.author-photo').css('top', (Math.max(amount-0.3, 0)*100))
+    $('.about-text-container').css('right', (Math.max(amount-0.3, 0)*60))
 }

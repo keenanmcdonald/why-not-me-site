@@ -12,7 +12,7 @@
     <section class='hero'>
         <header>
             <nav>
-                <ul>
+                <ul class='nav-list'>
                     <li>
                         <a href='#purchase'>PURCHASE</a>
                     </li>
@@ -42,7 +42,7 @@
     <section class='content'>
         <div class='row purchase' id='purchase'>
             <div class='col-md-4 cover-container p-0'>
-                <img class='cover' src='./images/why-not-me-cover.jpg'/>
+                <img class='cover' src='./images/why-not-me-cover.jpg' alt='Why Not Me book cover'/>
             </div>
             <div class='col-md-8 description-container'>
                 <div class='plain-title-container'>
@@ -52,37 +52,27 @@
                     <h5 class='plain-subtitle'>
                         Finessing Life's Slings and Arrows
                     </h5>
-                    <h6>By: Rev. Donald H. Wheat</h6>
+                    <h6>Rev. Donald H. Wheat</h6>
                 </div>
                 <div class='button-container'>
                     <button class='purchase'>
                         Paperback
-                        <p class='price'>13.99</p>
+                        <p class='price'>$17.99</p>
                     </button>
-                    <button class='purchase'>
+                    <button class='purchase disabled'>
                         E-Book
-                        <p class='price'>$9.99</p>
+                        <p class='price'>(Coming Soon)</p>
                     </button>
                 </div>
                 <div class='description'>
                     <p>
-                        One thing that drove me from the Christian ministry was being asked,
-                        “Why me?” when bad things happened—and only then! I wanted to scream,
-                        “Why you? Why anyone?” But that didn’t seem very understanding or
-                        compassionate.
+                        The 40 short essays in Why Not Me? show how to live a fulfilling, meaningful life in a universe that wasn’t designed to ensure human happiness. A common response to tragedy is, "Why me?" Ironically, those who grasp that unfairness and misfortune are inevitable parts of life often experience more gratitude and happiness for the many good things that do come their way.
                     </p>
                     <p>
-                        Only 33 out of perhaps 1,000 plays performed in Athens around the fifth
-                        century B.C. survive. These plays did not portray pain as an intrusion on life.
-                        They did not wrestle with the question, “Why me?”
+                        In clear, accessible words, Rev. Donald Wheat unfolds his humanist philosophy. The book draws psychological, political, ecological and comedic insights from such varied individuals as Malcolm X and Malcolm McDowell, Friedrich Nietzsche and Fredrick Douglass, Karl Marx and Carl Sagan, Emily Dickinson and Oscar Wilde, W.H. Auden and M.L. King, George Carlin and Cornel West, Mahatma Gandhi and Ken Kesey, Simon Wiesenthal and Maureen Dowd, and Margaret Sanger and Lenny Bruce.
                     </p>
                     <p>
-                        We must not spend our time asking, “Why?” Nor must we squander time
-                        in resentment, disillusionment, arrogance, or judgment. Instead, we must
-                        find happiness amidst the absurdities of life ... If no one is looking after us,
-                        then we must look aft er each other. We have resolved to be more just and
-                        more loving than what has been given to us. This is man’s greatness. And it is
-                        enough.
+                        The best revenge for an often-unfair life is to live fully and courageously, nurturing others and promoting justice. "If no one is looking after us,” Wheat concludes, “then we must look after each other. We have resolved to be more just and more loving than what has been given to us. This is man's greatness. And it is enough."
                     </p>    
                 </div>
 
@@ -92,16 +82,38 @@
         <div class='row about' id='about'>
             <div class='row-title-container'>
             </div>
-            <div class='col-md-8'>
+            <div class='col-md-8 about-text-container'>
                 <h4 class='about-title'>About the Author</h4>
                 <p>
-                    <span class='author'>Rev. Donald H. Wheat</span> sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                    Rev. Donald H. Wheat was born in Dayton, Ohio to William and Frances
+                    Wheat on Halloween 1933. In 1955 he graduated from Hiram College
+                    and married Ann Warren Wheat in Leipsic, Ohio. He graduated from
+                    the University of Chicago Divinity School in 1958. After serving Christian
+                    Churches in Rensselaer, Indiana and Oak Park, Illinois, Don found his philosophical
+                    home at Third Unitarian Church of Chicago. He served there from
+                    1969 to 1996 (apart from brief stints at First Unitarian of Albany, New York,
+                    and heading a Chicago-area community center). He retired to South Haven,
+                    Michigan, where Ann Wheat died in 2015. Third Church’s annual Wheat Lecture
+                    is named for its minister emeritus.
                 </p>    
+            </div>
+            <div class='col-md-4 author-photo-container'>
+                <img class='author-photo' src='./images/author-photo-cropped.jpg' alt='Donald H. Wheat'/>
             </div>
         </div>    
     </section>
     <footer id='contact'>
         <div class='row contact'>
+            <div class='contact-title-container'>
+                <h6 class='contact-title'>CONTACT</h6>
+            </div>
+            <ul class='contact-list'>
+                <li class='email'>
+                    <img class='icon' src='./images/email-icon.png' alt='email icon'/>
+                    <a class='email-link' href='mailto:andrewawheat@gmail.com'>andrewawheat@gmail.com</a>
+                </li>
+            </ul>
+
         </div> 
     </footer>
     <script

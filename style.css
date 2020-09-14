@@ -38,7 +38,7 @@ header * {
 section.content{
     width: 100%;
     background-color: rgb(20,20,20,0.9);
-    padding: 50px 10%;
+    padding: 50px 8%;
 }
 
 .hero{
@@ -66,24 +66,31 @@ h3{
     font-size: 38px;
 }
 
-.cover {
+.cover, .author-photo{
     max-width: 100%;
-    box-shadow: -2px 2px 6px 0px rgba(0,0,0);
     border-radius: 2px;
     position: relative;
     top: 0;
     margin-bottom: 30px;
 }
 
+.cover{
+    box-shadow: -2px 2px 6px 0px rgba(0,0,0);
+}
+
 .description-container{
     padding-left: 4%;
+    position: relative;
+}
+.about-text-container{
+    position: relative;
 }
 
 nav{
     margin-top: 6px;
 }
 
-ul{
+ul.nav-list{
     padding: 0px;
     width: 96vw;
     height: 100px;
@@ -127,7 +134,7 @@ h4{
     font-size: 32px;
 }
 
-h5.plain-subtitle{
+h5.plain-subtitle, h6{
     font-family: MinionPro;
 }
 
@@ -141,11 +148,12 @@ div.row{
 }
 
 button.purchase{
+    width: 160px;
     background-color: transparent;
     border: 1px white solid;
     border-radius: 4px;
     color: white;
-    padding: 2% 8%;
+    padding: 2% 4%;
     transition-duration: 0.2s;
     position: relative;
     top: 0;
@@ -159,6 +167,17 @@ button.purchase:hover{
     top: 1px;
 }
 
+button.purchase.disabled{
+    border-color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+}
+button.purchase.disabled{
+    cursor: default;
+    border-color: rgba(255, 255, 255, 0.8);
+    top: 0;
+}
+
+
 .price{
     margin: 0;
 }
@@ -170,29 +189,85 @@ span.author{
 }
 
 p{
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: MinionPro;
+
 }
 
 div.contact {
-    min-height: 200px;
-    background-color: rgb(25,25,25,0.6)
+    min-height: 100px;
+    margin: 0px;
+    background-color: rgb(25,25,25,0.6);
+    text-align: center;
+    padding: 20px 0;
+    opacity: 70%;
+    transition-duration: 0.4s;
+}
+div.contact:hover {
+    opacity: 100%;
+}
+
+
+a.email-link{
+    font-family: MinionPro;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: none;
+
+}
+a.email-link:hover{
+    color: rgba(255, 255, 255);
+    border-bottom: none;
+    top: 0;
+}
+
+.contact-title-container{
+    width: 100%;
+    text-align: center;
+}
+
+ul.contact-list{
+    width: 100%;
+    padding: 0;
+}
+
+h6.contact-title{
+    font-family: BernhardFashion;
+    color: #E43B20;
+}
+
+img.icon{
+    height: 12px;
+    margin-right: 6px;
 }
 
 @media only screen and (max-width: 1400px) {
     p{
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
 @media only screen and (max-width: 1000px) {
     p{
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 770px) {
     p{
-        font-size: 10px;
+        font-size: 12px;
+    }
+    div.row{
+        padding-top: 0;
+        margin-left: 0px;
+    }
+    button.purchase{
+        width: 120px;
+    }
+    div.contact {
+        opacity: 100%;
+        padding-top: 20px;
     }
 }
 

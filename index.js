@@ -2,7 +2,6 @@
 $(window).on('scroll', function() {
     scrollTop = $(window).scrollTop()
     
-    
     titleScrollOut(scrollTop)
     backgroundScrollIn(scrollTop)
     purchaseScrollIn(scrollTop)

@@ -66,7 +66,7 @@ function highlightContact(scrollTop){
     const pageBottom = $('#contact').position().top + $('#contact').height()
 
 
-    if (scrollBottom >= pageBottom){
+    if (scrollBottom >= pageBottom || $(window).width() <= 770){
         console.log(scrollBottom, pageBottom)
         $('div.contact').css('opacity', '100%')
     }
@@ -74,13 +74,3 @@ function highlightContact(scrollTop){
         $('div.contact').css('opacity', '70%')
     }
 }
-
-var docWidth = document.documentElement.offsetWidth;
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
-  }
-);

@@ -15,6 +15,8 @@ red: #E43B20
 
 html{
     max-width: 100vw;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 body{

@@ -46,7 +46,9 @@ function purchaseScrollIn(scrollTop){
     $('#purchase').css('opacity', 1.1-amount)
     $('img.cover').css('top', (Math.max(amount-0.3, 0)*100))
     $('img.cover').css('box-shadow', `-2px 2px 6px 0px rgba(0,0,0, ${1-(Math.min(0.2, amount)*3)})`);
-    $('.description-container').css('left', (Math.max(amount-0.3, 0)*60))
+    if(window. matchMedia("(min-width: 770px)"). matches){
+        $('.description-container').css('left', (Math.max(amount-0.3, 0)*60))
+    }
 }
 
 function aboutScrollIn(scrollTop){

@@ -13,14 +13,9 @@ red: #E43B20
     src: url("./fonts/MinionPro-Regular.otf") format("opentype");
 }
 
-.wrapper{
-    max-width: 100vw;
-    /*overflow-x: hidden;*/
-    -webkit-overflow-scrolling: touch;
-}
 
 body{
-    max-width: 100vw;
+    max-width: 100%;
     color: white;
 }
 
@@ -50,6 +45,7 @@ h1 {
     font-family: BernhardFashion;
     font-size: 80px;
     color: #E43B20;
+    margin: 0 10px;
 }
 
 h2 {

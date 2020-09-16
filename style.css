@@ -68,7 +68,7 @@ section.content{
 }
 
 .hero-text-container{
-    margin-top: 15%;
+    margin-top: 20vh;
 }
 
 h1 {
@@ -85,6 +85,30 @@ h2 {
 h3{
     font-family: BernhardFashion;
     font-size: 38px;
+}
+
+.arrow-container{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -30px;
+}
+
+.arrow{
+    width: 60px;
+    opacity: 0.5;
+    position: relative;
+    animation: MoveUpDown 2s ease-in infinite;
+    transition-duration: 0.3s;
+}
+
+@keyframes MoveUpDown{
+    0%, 100%{
+        bottom: 0px;
+    }
+    50%{
+        bottom: 5px;
+    }
 }
 
 .cover, .author-photo{
@@ -289,10 +313,6 @@ footer{
 @media only screen and (max-width: 770px) {
     p{
         font-size: 12px;
-    }
-    div.row{
-        padding-top: 0;
-        margin-left: 0px;
     }
     button.purchase{
         width: 120px;

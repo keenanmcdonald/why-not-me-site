@@ -7,8 +7,19 @@ $(window).on('scroll', function() {
     purchaseScrollIn(scrollTop)
     aboutScrollIn(scrollTop)
     highlightContact(scrollTop)
+    hideArrow(scrollTop)
 })
 
+function hideArrow(scrollTop){
+    const docTop = $('html').position().top
+
+    if (scrollTop > docTop){
+        $('.arrow').css('opacity', 0)
+    }
+    else{
+        $('.arrow').css('opacity', 0.5)
+    }
+}
 
 function titleScrollOut(scrollTop){
     const titleOpacity = 1 - Math.min(scrollTop / 500, 1) 
@@ -40,12 +51,13 @@ function purchaseScrollIn(scrollTop){
 }
 
 function aboutScrollIn(scrollTop){
-    const aboutTop = $('#about').position().top
-    const amount = Math.max((aboutTop - scrollTop) / $(window).height(), 0)
+    const scrollBottom = scrollTop + $(window).height()
+    const aboutBottom = $('#about').position().top + $('#about').height()
+    const amount = Math.max((aboutBottom - scrollBottom) / $(window).height(), 0)
     $('#about').css('opacity', 1.1-amount)
-    $('img.author-photo').css('top', (Math.max(amount-0.3, 0)*100))
-    $('.about-text-container').css('right', (Math.max(amount-0.3, 0)*60))
-    $('.about-border').css('width', `${Math.min((1/amount*10)+20, 70)}%`)
+    $('img.author-photo').css('top', (Math.max(amount-0.1, 0)*100))
+    $('.about-text-container').css('right', (Math.max(amount-0.1, 0)*60))
+    $('.about-border').css('width', `${Math.min((1/amount*10), 70)}%`)
 }
 
 function highlightContact(scrollTop){

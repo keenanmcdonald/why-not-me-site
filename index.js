@@ -1,4 +1,3 @@
-
 $(window).on('scroll', function() {
     scrollTop = $(window).scrollTop()
     
@@ -56,7 +55,9 @@ function aboutScrollIn(scrollTop){
     const amount = Math.max((aboutBottom - scrollBottom) / $(window).height(), 0)
     $('#about').css('opacity', 1.1-amount)
     $('img.author-photo').css('top', (Math.max(amount-0.1, 0)*100))
-    $('.about-text-container').css('right', (Math.max(amount-0.1, 0)*60))
+    if(window. matchMedia("(min-width: 770px)"). matches){
+        $('.about-text-container').css('right', (Math.max(amount-0.1, 0)*60))
+    }
     $('.about-border').css('width', `${Math.min((1/amount*10), 70)}%`)
 }
 
@@ -71,7 +72,15 @@ function highlightContact(scrollTop){
     }
     else{
         $('div.contact').css('opacity', '70%')
-
     }
-
 }
+
+var docWidth = document.documentElement.offsetWidth;
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);

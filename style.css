@@ -14,11 +14,13 @@ red: #E43B20
 }
 
 html{
+    max-width: 100%;
     overflow-x: hidden;
 }
 
 body{
     max-width: 100%;
+    overflow-x: hidden;
     color: white;
     /*
     background-image: url('./images/cover-photo-dark.jpg');

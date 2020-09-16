@@ -66,7 +66,7 @@ function highlightContact(scrollTop){
     const pageBottom = $('#contact').position().top + $('#contact').height()
 
 
-    if (scrollBottom >= pageBottom || $(window).width() <= 770){
+    if (scrollBottom >= pageBottom || $(window).width() <= 828){
         $('div.contact').css('opacity', '100%')
     }
     else{

@@ -67,7 +67,6 @@ function highlightContact(scrollTop){
 
 
     if (scrollBottom >= pageBottom || $(window).width() <= 770){
-        console.log(scrollBottom, pageBottom)
         $('div.contact').css('opacity', '100%')
     }
     else{

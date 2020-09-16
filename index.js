@@ -73,3 +73,14 @@ function highlightContact(scrollTop){
         $('div.contact').css('opacity', '70%')
     }
 }
+
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);

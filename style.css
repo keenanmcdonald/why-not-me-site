@@ -13,14 +13,34 @@ red: #E43B20
     src: url("./fonts/MinionPro-Regular.otf") format("opentype");
 }
 
-body{
+html{
     overflow-x: hidden;
+}
+
+body{
     max-width: 100%;
     color: white;
+    /*
     background-image: url('./images/cover-photo-dark.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    */
+}
+
+body:after{
+    content:"";
+    position: fixed;
+    top:0;
+    height:100vh; 
+    left:0;
+    right:0;
+    z-index:-1; 
+    background: url('./images/cover-photo-dark.jpg') center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
@@ -29,17 +49,17 @@ header * {
     background-color: transparent;
 }
 
-.row{
+div.row{
     width: 100%;
-    /*margin-bottom: 60px;*/
-    /*height: 100vh;*/
-    min-height: 520px;
+    min-height: 420px;
+    padding: 40px 8%;
+    margin: 0;
 }
 
 section.content{
     width: 100%;
     background-color: rgb(20,20,20,0.9);
-    padding: 50px 8%;
+    padding: 0;
 }
 
 .hero{
@@ -83,6 +103,18 @@ h3{
     padding-left: 4%;
     position: relative;
 }
+
+div.about-border-container{
+    text-align: center;
+}
+
+div.about-border{
+    display: inline-block;
+    width: 80%;
+    height: 0px;
+    border-top: solid 1px rgb(255,255,255, 0.7)
+}
+
 .about-text-container{
     position: relative;
 }
@@ -137,10 +169,6 @@ h4{
 
 h5.plain-subtitle, h6{
     font-family: MinionPro;
-}
-
-div.row{
-    padding: 10px 0;
 }
 
 
@@ -199,7 +227,6 @@ p{
 div.contact {
     min-height: 100px;
     margin: 0px;
-    background-color: rgb(25,25,25,0.6);
     text-align: center;
     padding: 20px 0;
     opacity: 70%;
@@ -243,6 +270,10 @@ img.icon{
     margin-right: 6px;
 }
 
+footer{
+    background-color: rgb(10,10,10,0.95);
+}
+
 @media only screen and (max-width: 1400px) {
     p{
         font-size: 16px;
@@ -269,6 +300,10 @@ img.icon{
     div.contact {
         opacity: 100%;
         padding-top: 20px;
+    }
+    a:hover{
+        border-bottom: none;
+        top: none;
     }
 }
 

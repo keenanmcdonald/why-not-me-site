@@ -6,6 +6,7 @@ $(window).on('scroll', function() {
     backgroundScrollIn(scrollTop)
     purchaseScrollIn(scrollTop)
     aboutScrollIn(scrollTop)
+    highlightContact(scrollTop)
 })
 
 
@@ -17,14 +18,14 @@ function titleScrollOut(scrollTop){
 function backgroundScrollIn(scrollTop){
     let backgroundOpacity = Math.min(scrollTop / 500, 1)
 
-    
+    /*
     const aboutTop = $('#about').position().top
     const scrollBottom = scrollTop + $(window).height();
 
     if (scrollBottom >= aboutTop){
         backgroundOpacity = 1.5 + ((aboutTop - scrollBottom + 200) / 500)
     }
-    
+    */
 
     $('section.content').css("background-color", `rgb(26,26,26,${backgroundOpacity})`)
 }
@@ -44,4 +45,21 @@ function aboutScrollIn(scrollTop){
     $('#about').css('opacity', 1.1-amount)
     $('img.author-photo').css('top', (Math.max(amount-0.3, 0)*100))
     $('.about-text-container').css('right', (Math.max(amount-0.3, 0)*60))
+    $('.about-border').css('width', `${Math.min((1/amount*10)+20, 70)}%`)
+}
+
+function highlightContact(scrollTop){
+    const scrollBottom = scrollTop + $(window).height()
+    const pageBottom = $('#contact').position().top + $('#contact').height()
+
+
+    if (scrollBottom >= pageBottom){
+        console.log(scrollBottom, pageBottom)
+        $('div.contact').css('opacity', '100%')
+    }
+    else{
+        $('div.contact').css('opacity', '70%')
+
+    }
+
 }
